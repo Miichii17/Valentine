@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine</title>
+    <style>
+        body {
+            background-color:hotpink;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:white;">Dear Lily, I have a very important question to ask!</h1>
+    <img src="will you.jpeg" alt="Center Image">
+    <div class="buttons">
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+
+    <script>
+        document.getElementById('noButton').addEventListener('click', function() {
+            alert('Uh oh! So close! Try again 😊');
+        });
+
+        document.getElementById('yesButton').addEventListener('click', function () {
+            document.body.innerHTML = `
+                <h1 style="color:white;">OH YEAH!!!!!!</h1>
+                <img src="happy-dancing.gif" alt="Happy Dancing GIF" style="max-width:300px; border-radius:15px;">
+                <p style="color:white; font-size:20px;">
+                    I love you see you soon 😘
+                </p>
+            `;
+        });
+    </script>
+</body>
+</html>
